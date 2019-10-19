@@ -7,14 +7,23 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
+
 
 class ViewController: UIViewController {
 
+    @IBAction func buttonTest(_ sender: Any) {
+        print("Crash button pressed")
+        Crashlytics.sharedInstance().crash()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    
+    
 
 }
 
